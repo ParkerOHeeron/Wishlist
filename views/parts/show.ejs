@@ -5,26 +5,42 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Computer Parts Wishlist</h1>
-    <form action="/parts" method="POST">
-      <input type="text" name="part">
-      <button type="submit">+</button>
-    </form>
-    <% if(parts.length) {%>
-      <% parts.forEach((t, idx) => { %>
-        <form action="">
-          <button>X</button>
-        </form>
-        <div>
-          <%= t.part%>
-          --
-          <%= t.name%>
-          --
-          <%= t.price%>
-          --
-          <%= t.url%>
-        </div> 
-      <% }) %>
-    <% } %>
+    <body>
+      <h1>Computer Parts Wishlist</h1>
+        <div class="login">
+          <p> <% if(user) { %> 
+                  <a href="/logout" class="logout">Logout</a>
+               <% } else { %>
+                  <a href="auth/google" class="login">Login with Google</a>
+               <% } %>
+          </p>
+          <table class="myList">
+              <thead>
+                <h2>Current Parts</h2>
+              </thead>
+              <tbody>
+              <% if(user) { %>
+                <% if(parts.length) {%>
+                  <% parts.forEach((t, idx) => { %>
+                    <tr>
+                      <td><a href="/"><%= t.name%></td>
+                      <td><%= t.price%></td>
+                    </tr>
+                  <% }) %>
+                <% } %>
+              <% } %>  
+              </tbody>
+          </table>
+  
+  
+  
+          <div class="image-preview">
+  
+          </div>
+          
+        </div>
+      
+    </body>
+   
   </body>
 </html>

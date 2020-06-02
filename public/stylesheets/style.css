@@ -11,3 +11,28 @@ a {
 div, form {
   display: inline;
 }
+
+h1 {
+  position: fixed;
+  top:        50%;
+  left:       50%;
+  font-size: 22px;
+}
+
+h2 {
+  top: 9%;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 10px 0 0;
+  font-size: 11px;
+}
+
+
+.myList {
+  top: 10%;
+}
+
