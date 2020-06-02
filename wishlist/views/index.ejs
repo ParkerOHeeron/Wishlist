@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Computer Parts Wishlist</h1>
+    <form action="/parts" method="POST">
+      <input type="text" name="part">
+      <button type="submit">+</button>
+    </form>
+    <% if(parts.length) {%>
+      <% parts.forEach((t, idx) => { %>
+        <form action="">
+          <button>X</button>
+        </form>
+        <div>
+          <%= t.part%>
+          --
+          <%= t.name%>
+          --
+          <%= t.price%>
+          --
+          <%= t.url%>
+        </div> 
+      <% }) %>
+    <% } %>
+  </body>
+</html>
