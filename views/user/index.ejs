@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Wishlist</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1>Computer Parts Wishlist</h1>
-
+    <form action="/parts" method="POST">
+      <input type="text" name="part">
+      <button type="submit">+</button>
+    </form>
+    
   </body>
 </html>

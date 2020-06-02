@@ -11,5 +11,8 @@ function index(req, res) {
 
 function create(req, res) {
     Part.create(req.body);
-     
+}
+
+function addPart(req, res) {
+    
 }

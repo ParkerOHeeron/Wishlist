@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../model/user');
 
 
 
@@ -13,14 +13,15 @@ function index(req, res, next) {
 
     let sortKey = req.query.sort || 'name';
     User.find(modelQuery)
-    .sort(sortKey).exec(function(err, users) {
+    .sort(sortKey).exec(function(err, user) {
         if (err) return next(err);
 
-        res.render('users/index', {
-            users, 
+        res.render('user/index', {
+            user, 
             user: req.user,
             name: req.query.name,
             sortKey
         });
     });
 }
+
