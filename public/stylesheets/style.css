@@ -33,6 +33,12 @@ p {
 
 
 .myList {
-  top: 10%;
+  top: 0;
+  left: 0;
+
+}
+
+.myList.addList {
+  padding: 0 0 50px 0;
 }
 

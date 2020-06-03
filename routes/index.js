@@ -2,7 +2,7 @@ var router = require('express').Router();
 var passport = require('passport');
 
 router.get('/', function(req, res) {
-    res.redirect('/user');
+    res.redirect('/user'); //This gives the user the ability to choose multiple lists first
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -13,14 +13,14 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
     'google',
     {
-        successRedirect: '/user',
-        failureRedirect: '/user'
+        successRedirect: '/list',
+        failureRedirect: '/auth/google'
     }
 ));
 
 router.get('/logout', function(req, res){
     req.logout();
-    res.redirect('/user');
+    res.redirect('/');
 });
 
 module.exports = router;

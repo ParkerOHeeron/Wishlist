@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Add a Part!</title>
+</head>
+<body>
+    <h1>Computer Parts Wishlist</h1>
+        <div class="login">
+            <p> <% if(user) { %> 
+                    <a href="/logout" class="logout">Logout</a>
+                    <% } else { %>
+                    <a href="auth/google" class="login">Login with Google</a>
+                    <% } %>
+            </p>
+        </div>
+        <div class="newListForm">
+            <form id="newList" method="POST" action="list/new">
+                <label>What is the name of this new list?</label>
+                <input type="text" id="name" placholder="Name of list"></input>
+                <input type="submit" value="Create List">
+            </form>            
+        </div>
+</body>
+</html>
+
+
+

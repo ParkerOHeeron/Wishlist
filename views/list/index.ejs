@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Add a Part!</title>
 </head>
 <body>
@@ -17,30 +18,21 @@
         <div class="myList">
             <table>
                 <thead>
-                  <h2>Current Parts</h2>
+                  <h2>My lists</h2>
                 </thead>
                 <tbody>
-                <% if(user) { %>
-                  <% if(list.parts.length) {%>
-                    <% parts.forEach(function(l){
-                      <tr>
-                        <td><a href="/list/:id/part/show<%= l._id%>"><%= l.name %></a></td>
-                        <td><%= t.price%></td>
+                  <% if(user) { %>
+                    <% list.forEach(function(l){ %>
+                      <tr> 
+                        <td><a href="/list/show"><%= l.name %></a></td>
                       </tr>
                     <% }) %>
-                      <tr>
-                        <a href='/list/:id/part/new'>+</a> 
+                      <tr class="addList">
+                        <a href='/list/new'>+</a> 
                       </tr>
-                  <% } %>
-                <% } %>  
+                  <% } %>  
                 </tbody>
             </table>
-        </div>
-
-
-
-        <div class="image-preview">
-
         </div>
 </body>
 </html>
