@@ -29,7 +29,7 @@
                       </tr>
                     <% }) %>
                       <tr>
-                        <a href='/list/:id/part/new<%= parts._id %>/<%= ' 
+                        <a href='/list/:id/part/new'>+</a> 
                       </tr>
                   <% } %>
                 <% } %>  
@@ -41,17 +41,6 @@
 
         <div class="image-preview">
 
-        </div>
-        
-        <div id="add-part-window">
-            <form id="add-part" method="POST" action="list/<%= list._id %>/parts">
-                <label>Part:</label>
-                <textarea name="content"></textarea>
-                <input type="text" id="name" placholder="Name of Part"></input>
-                <input type="text" id="price" placholder="Price of Part"></input>
-                <input type="text" id="url" placholder="Url of Part"></input>
-                <input type="submit" value="Add Part">
-            </form>
         </div>
 </body>
 </html>

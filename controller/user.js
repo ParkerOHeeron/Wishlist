@@ -1,11 +1,9 @@
 const User = require('../model/user');
-
+const Part = require('../model/parts');
 
 
 module.exports = {
-    index,
-    addPart,
-    deletePart
+    index
 };
 
 function index(req, res, next) {
@@ -35,18 +33,3 @@ function index(req, res, next) {
 
 
 
-function addPart(req, res, next){
-    req.user.list.push(req.body);
-    req.user.save(function(err){
-        res.redirect('/user');
-    })
-}
-
-function deletePart(req, res, next){
-    User.findOne({'part._id': req.params.id}, function(err, user) {
-        user.list.id(req.params.id).remove();
-        user.save(function(err) {
-            res.redirect('/user');
-        })
-    })
-}

@@ -1,18 +1,23 @@
-const Part = require('../config/data');
+const List = require('../model/list');
+
 
 module.exports = {
-    index,
-    create
+    //new: newPartBox,
+    createPart
+    //deletePart
 }
 
-function index(req, res) {
-    res.render('index', { parts: Part.getAll()})
+//function newPartBox(req, res) {
+//    console.log(req.params.id)
+//    res.render('parts/new', {title: 'Add Part'});
+//}
+
+function createPart(req, res) {
+    List.findById(req.params.id, function(err, list) {
+        list.parts.push(req.body);
+        list.save(function(err) {
+            res.redirect(`/list/${list._id}`);
+        }); 
+    });
 }
 
-function create(req, res) {
-    Part.create(req.body);
-}
-
-function addPart(req, res) {
-    
-}

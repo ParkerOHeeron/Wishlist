@@ -1,8 +1,9 @@
-var express = require('express');
-var router = express.Router();
-const partsCtrl = require('../controller/parts');
+const express = require('express');
+const router = express.Router();
+const partCtrl = require('../controller/parts');
 
-router.get('/', partsCtrl.index);
-router.post('/parts', partsCtrl.create);
+router.post('/list/:id/parts/new', partCtrl.create);
+
+
 
 module.exports = router;
