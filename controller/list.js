@@ -44,7 +44,7 @@ function update(req, res) {
 function showUpdate(req, res) {
     List.findById(req.params.id, function(err, list) {
         console.log(list)
-        res.render('list/update', {title: 'Update List', flight: flight});
+        res.render('list/update', {title: 'Update List', list: list});
     })
 }
 
