@@ -18,7 +18,7 @@ require('./config/passport');
 var indexRoutes = require('./routes/index');
 var usersRoutes = require('./routes/user');
 var listRouter = require('./routes/list');
-const partRouter = require('./routes/parts');
+var partRouter = require('./routes/parts');
 
 
 app.set('views', path.join(__dirname, 'views'));

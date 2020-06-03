@@ -8,7 +8,7 @@ router.get('/', listCtrl.index);
 //router.get('/:id', listCtrl.detail); Not sure if this should be in routes/list or routes/parts 
 //router.post('/new', listCtrl.createList); Haven't implemented multiple lists yet
 //router.delete('/:id', listCtrl.delete); Haven't implemented multiple lists yet
-//reouter.post('/update/:id', listCtrl.update);
+//router.post('/update/:id', listCtrl.update); This should redirect back to list/show showing updated list
 
 
 

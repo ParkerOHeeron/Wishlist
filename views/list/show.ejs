@@ -24,7 +24,7 @@
                   <% if(list.length) {%>
                     <% list.forEach(function(l){
                       <tr>
-                        <td><a href="/list/<%= l._id%>"><%= l.name %></a></td>
+                        <td><a href="/list/:id/part/show<%= l._id%>"><%= l.name %></a></td>
                         <td><%= t.price%></td>
                       </tr>
                     <% }) %>

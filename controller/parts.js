@@ -21,3 +21,14 @@ function createPart(req, res) {
     });
 }
 
+function showPart(req, res) {
+    //This will be the controller for when the part is clicked
+    //Needs to show name, price, url
+
+}
+
+function deletePart(req, res) {
+    //This can either be in controller/parts or controller/list
+        //for controller/parts it would be Part.delete(~~~)
+        //for controller/list it could be List.pop();  --> It may need to be in controller/parts, pop takes the top of the array 
+}
