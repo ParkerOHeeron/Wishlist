@@ -6,6 +6,7 @@ module.exports = {
     index,
     update,
     show,
+    showUpdate,
     delete: deleteOne,
     new: newListView,
     createList

@@ -10,6 +10,7 @@
               <% list.forEach(function(l){ %>
                 <tr> 
                   <td><a href="/list/<%= l._id %>" style="color:red"><%= l.name %></a></td>
+                  <td><a href="/list/<%= l._id %>/update">Edit Name</a></td>
                   <td>
                     <form action="/list/<%= l.id %>?_method=DELETE" method="POST">
                       <button type="submit">X</button>

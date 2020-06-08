@@ -1,0 +1,10 @@
+<%- include('../snippets/header') %>
+
+<form id='new-form' action='/list/update/<%= list._id %>' method="POST">
+    <label>What is the new name of this list?</label>
+    <input type="text" name="name" placholder="Name of list"></input>
+    <input type="submit" value="Create List">
+</form>
+
+
+<%- include('../snippets/header') %>
