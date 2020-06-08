@@ -1,13 +1,13 @@
 <%- include('../snippets/header') %>
 
- 
+  <div class="partFormNav">
     <form id="new-part" action="/list/<%= list._id %>/parts" method="POST" >
       <input type="text" name="name" placeholder="Name of Part" class="partForm">
       <input type="text" name="url" placeholder="Url of part" class="partForm">
       <input type="number" name="price" placeholder="Price of part" class="partForm">
       <input type="submit" value="Add Part">
     </form>
-  
+  </div>
 
   <div class="myParts">
       <table class="col-table">
@@ -27,10 +27,10 @@
                     <td><%= p.url %></td>
                     <td><%= p.name %></td>
                     <td>$<%= p.price %></td>
-                    <td><form action="/list/<%= p.id %>/parts?_method=DELETE" method="POST">
+                    <!--<td><form action="/list/p.id /parts?_method=DELETE" method="POST">
                       <button type="submit">X</button>
                     </form>
-                    </td>
+                    </td>-->
                   </tr>
                 <% }); %>
                 <% } %>

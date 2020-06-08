@@ -14,9 +14,10 @@
      <nav>
         <div class="login">
             <p> <% if(user) { %> 
-                    <a href="/logout" class="logout">Logout</a>
+                    <a href="/list" style="color:red">My Lists</a>
+                    <a href="/logout" class="logout" style="color:red">Logout</a>
                 <% } else { %>
-                    <a href="auth/google" class="login">Login with Google</a>
+                    <a href="auth/google" class="login" style="color:red">Login with Google</a>
                 <% } %>
             </p>
         </div>

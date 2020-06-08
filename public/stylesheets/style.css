@@ -14,7 +14,6 @@ div, form {
 }
 
 h1 {
-
   font-size: 16px;
 }
 
@@ -22,7 +21,7 @@ h1 {
   position: fixed;
   top:          0;
   left:         0;
-  border-left: thick solid #ff0000;
+  border-left: thick solid #4834c9;
   
 }
 
@@ -54,9 +53,14 @@ p {
   left: 0;
 }
 
-#container {
-  
+#new-part {
+  border-width: 5px;
+
 }
+
+.partFormNav {
+}
+
 .partForm {
   border-width: 10px;
 }
