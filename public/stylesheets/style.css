@@ -14,8 +14,8 @@ div, form {
 
 h1 {
   position: fixed;
-  top:        50%;
-  left:       50%;
+  top:          0;
+  right:      50%;
   font-size: 22px;
 }
 
@@ -31,6 +31,10 @@ p {
   font-size: 11px;
 }
 
+.login {
+  top: 0;
+  right: 0;
+}
 
 .myList {
   top: 0;
@@ -38,7 +42,25 @@ p {
 
 }
 
-.myList.addList {
-  padding: 0 0 50px 0;
+.myParts {
+  top:0;
+  left: 0;
+}
+
+.col-table tr:nth-child(odd){
+  background-color: #fff;
+}
+
+.col-table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.col-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.col-table th:first-child,
+.col-table td:first-child {
+  padding-left: 16px;
 }
 

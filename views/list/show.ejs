@@ -10,18 +10,23 @@
   
 
   <div class="myParts">
-      <table>
+      <table class="col-table">
           <thead>
             <h2>Current Parts</h2>
           </thead>
           <tbody>
             <% if(user) { %>
               <% if(list.parts.length) { %> 
-                <% list.parts.forEach(function(l){ %>
+                  <tr>
+                    <th>URL</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                  </tr>
+                <% list.parts.forEach(function(p){ %>
                   <tr> 
-                    <li><%= l.url %></li>
-                    <li><%= l.name %></li>
-                    <li><%= l.price %></li>
+                    <td><%= p.url %></td>
+                    <td><%= p.name %></td>
+                    <td>$<%= p.price %></td>
                   </tr>
                 <% }); %>
                 <% } %>
