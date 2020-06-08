@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #bcc2c2;
 }
 
 a {
@@ -13,10 +14,16 @@ div, form {
 }
 
 h1 {
+
+  font-size: 16px;
+}
+
+.header {
   position: fixed;
   top:          0;
-  right:      50%;
-  font-size: 22px;
+  left:         0;
+  border-left: thick solid #ff0000;
+  
 }
 
 h2 {
@@ -47,12 +54,19 @@ p {
   left: 0;
 }
 
+#container {
+  
+}
+.partForm {
+  border-width: 10px;
+}
+
 .col-table tr:nth-child(odd){
-  background-color: #fff;
+  background-color: #4f93b8;
 }
 
 .col-table tr:nth-child(even) {
-  background-color: #f1f1f1;
+  background-color: #b9e3fa;
 }
 
 .col-table tr {

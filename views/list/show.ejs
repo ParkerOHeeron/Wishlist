@@ -1,10 +1,10 @@
 <%- include('../snippets/header') %>
 
  
-    <form id="new-part" action="/list/<%= list._id %>/parts" method="POST">
-      <input type="text" name="name" placeholder="Name of Part">
-      <input type="text" name="url" placeholder="Url of part">
-      <input type="number" name="price" placeholder="Price of part">
+    <form id="new-part" action="/list/<%= list._id %>/parts" method="POST" >
+      <input type="text" name="name" placeholder="Name of Part" class="partForm">
+      <input type="text" name="url" placeholder="Url of part" class="partForm">
+      <input type="number" name="price" placeholder="Price of part" class="partForm">
       <input type="submit" value="Add Part">
     </form>
   
@@ -35,7 +35,7 @@
       </table>
   </div>
 
-
+  <%- include('../snippets/footer') %>
 
         
 </body>

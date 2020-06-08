@@ -8,13 +8,18 @@
     <title>Computer Parts Wishlist</title>
 </head>
 <body> 
-    <main>
+    <div class="header">
         <h1>Computer Parts Wishlist</h1>
+    </div>
+     <nav>
         <div class="login">
             <p> <% if(user) { %> 
                     <a href="/logout" class="logout">Logout</a>
-                 <% } else { %>
+                <% } else { %>
                     <a href="auth/google" class="login">Login with Google</a>
-                 <% } %>
+                <% } %>
             </p>
         </div>
+     </nav>
+        <div id="container">
+            
