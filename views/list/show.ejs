@@ -27,6 +27,10 @@
                     <td><%= p.url %></td>
                     <td><%= p.name %></td>
                     <td>$<%= p.price %></td>
+                    <td><form action="/list/<%= p.id %>/parts?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                    </td>
                   </tr>
                 <% }); %>
                 <% } %>

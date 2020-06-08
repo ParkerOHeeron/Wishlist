@@ -2,7 +2,8 @@ var List = require('../model/list');
 
 
 module.exports = {
-    create
+    create,
+    delete: deleteOne
 }
 
 function create(req, res) {
@@ -13,4 +14,8 @@ function create(req, res) {
             res.redirect(`/list/${list._id}`);
         })
     })
+}
+
+function deleteOne(req, res) {
+    List.findByIdAndDelete
 }
