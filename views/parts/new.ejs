@@ -1,58 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a Part!</title>
-</head>
-<body>
-    <h1>Computer Parts Wishlist</h1>
-      <div class="login">
-        <p> <% if(user) { %> 
-                <a href="/logout" class="logout">Logout</a>
-             <% } else { %>
-                <a href="auth/google" class="login">Login with Google</a>
-             <% } %>
-        </p>
-        <div class="myList">
-            <table>
-                <thead>
-                  <h2>Current Parts</h2>
-                </thead>
-                <tbody>
-                <% if(user) { %>
-                  <% if(list.length) {%>
-                    <% list.forEach(function(l){
-                      <tr>
-                        <td><a href="/list/<%= l._id%>"><%= l.name %></a></td>
-                        <td><%= t.price%></td>
-                      </tr>
-                    <% }) %>
-                      <tr>
-                        <a href='/list/:id/part/new<%= parts._id %>/<%= ' 
-                      </tr>
-                  <% } %>
-                <% } %>  
-                </tbody>
-            </table>
-        </div>
+<%- include('../snippets/header') %>
 
-
-
-        <div class="image-preview">
-
-        </div>
-        
-        <div id="add-part-window">
-            <form id="add-part" method="POST" action="list/<%= list._id %>/parts">
-                <label>Part:</label>
-                <textarea name="content"></textarea>
-                <input type="text" id="name" placholder="Name of Part"></input>
-                <input type="text" id="price" placholder="Price of Part"></input>
-                <input type="text" id="url" placholder="Url of Part"></input>
-                <input type="submit" value="Add Part">
-            </form>
-        </div>
+    <div id="add-part-window">
+        <form id="add-part" method="POST" action="list/<%= list._id %>/parts">
+            <label>Part:</label>
+            <textarea name="content"></textarea>
+            <input type="text" id="name" placholder="Name of Part"></input>
+            <input type="text" id="price" placholder="Price of Part"></input>
+            <input type="text" id="url" placholder="Url of Part"></input>
+            <input type="submit" value="Add Part">
+        </form>
+    </div>
 </body>
 </html>
 

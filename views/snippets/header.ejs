@@ -9,4 +9,11 @@
 <body> 
     <main>
         <h1>Computer Parts Wishlist</h1>
-    
+        <div class="login">
+            <p> <% if(user) { %> 
+                    <a href="/logout" class="logout">Logout</a>
+                 <% } else { %>
+                    <a href="auth/google" class="login">Login with Google</a>
+                 <% } %>
+            </p>
+        </div>

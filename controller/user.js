@@ -1,5 +1,5 @@
 const User = require('../model/user');
-const Part = require('../model/parts');
+
 
 
 module.exports = {
@@ -24,12 +24,3 @@ function index(req, res, next) {
         });
     });
 }
-
-/*function index(req, res) {
-    User.find({}, function(err, user) {
-        res.render('user/')
-    })
-}*/
-
-
-

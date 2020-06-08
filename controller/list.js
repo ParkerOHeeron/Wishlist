@@ -1,10 +1,11 @@
 var User = require('../model/user');
 var List = require('../model/list');
-var Part = require('../model/parts');
+
 
 module.exports = {
     index,
     update,
+    show,
     showUpdate,
     delete: deleteOne,
     new: newListView,
@@ -14,6 +15,16 @@ module.exports = {
 function index(req, res) {
     List.find({}, function(err, list){
         res.render('list/index', {title: 'Current Parts', list});
+    })
+}
+
+function show(req, res) {
+    List.findById(req.params.id, function(err, list) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('list/show', {title: 'Movie Detail', list});
+        }
     })
 }
 

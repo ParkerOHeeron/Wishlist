@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Add a Part!</title>
-</head>
-<body>
-    <h1>Computer Parts Wishlist</h1>
-      <div class="login">
-        <p> <% if(user) { %> 
-                <a href="/logout" class="logout">Logout</a>
-             <% } else { %>
-                <a href="auth/google" class="login">Login with Google</a>
-             <% } %>
-        </p>
-        <div class="myList">
-            <table>
-                <thead>
-                  <h2>My lists</h2>
-                </thead>
-                <tbody>
-                  <% if(user) { %>
-                    <% list.forEach(function(l){ %>
-                      <tr> 
-                        <td><a href="/list/show"><%= l.name %></a></td>
-                      </tr>
-                    <% }) %>
-                      <tr class="addList">
-                        <a href='/list/new'>+</a> 
-                      </tr>
-                  <% } %>  
-                </tbody>
-            </table>
-        </div>
+<%- include('../snippets/header') %>
+
+  <div class="myList">
+      <table>
+          <thead>
+            <h2>My list</h2>
+          </thead>
+          <tbody>
+            <% if(user) { %>
+              <% list.forEach(function(l){ %>
+                <tr> 
+                  <td><a href="/list/<%= l._id %>"><%= l.name %></a></td>
+                </tr>
+              <% }) %>
+                <tr class="addList">
+                  <a href='/list/new'>+</a> 
+                </tr>
+            <% } %>  
+          </tbody>
+      </table>
+  </div>
 </body>
 </html>
 

@@ -1,47 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a Part!</title>
-</head>
-<body>
-    <h1>Computer Parts Wishlist</h1>
-      <div class="login">
-        <p> <% if(user) { %> 
-                <a href="/logout" class="logout">Logout</a>
-             <% } else { %>
-                <a href="auth/google" class="login">Login with Google</a>
-             <% } %>
-        </p>
-        <div class="myList">
-            <table>
-                <thead>
-                  <h2>Current Parts</h2>
-                </thead>
-                <tbody>
-                <% if(user) { %>
-                  <% if(list.parts.length) {%>
-                    <% parts.forEach(function(l){
-                      <tr>
-                        <td><a href="/list/:id/part/show<%= l._id%>"><%= l.name %></a></td>
-                        <td><%= t.price%></td>
-                      </tr>
-                    <% }) %>
-                      <tr>
-                        <a href='/list/:id/part/new'>+</a> 
-                      </tr>
-                  <% } %>
-                <% } %>  
-                </tbody>
-            </table>
-        </div>
+<%- include('../snippets/header') %>
 
+  <div class="myParts">
+      <table>
+          <thead>
+            <h2>Current Parts</h2>
+          </thead>
+          <tbody>
+            <% if(user) { %>
+              <% if(list.parts) { %> 
+                <% list.parts.forEach(function(l){ %>
+                  <tr> 
+                    <li><%= l.url %></li>
+                    <li><%= l.name %></li>
+                    <li><%= l.price %></li>
+                  </tr>
+                <% }); %>
+                <% } %>
+              <%  }; %>
+          </tbody>
+      </table>
+  </div>
 
+  <div class="card-action">
+    <form id="new-part" action="/list/:id/parts" method="POST">
+      <input type="text" name="name" placeholder="Name of Part">
+      <input type="text" name="url" placeholder="Url of part">
+      <input type="number" name="price" placeholder="Price of part">
+      <input type="submit" value="Add Part">
+    </form>
+  </div>
 
-        <div class="image-preview">
-
-        </div>
+        
 </body>
 </html>
 
