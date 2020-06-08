@@ -7,9 +7,9 @@ module.exports = {
 
 function create(req, res) {
     List.findById(req.params.id, function(err, list) {
+        console.log(req.body, "req.body in parts controller");
         list.parts.push(req.body);
-        console.log(req.body);
-        flight.save(function(err) {
+        list.save(function(err) {
             res.redirect(`/list/${list._id}`);
         })
     })

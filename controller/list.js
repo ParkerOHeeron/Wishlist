@@ -6,7 +6,6 @@ module.exports = {
     index,
     update,
     show,
-    showUpdate,
     delete: deleteOne,
     new: newListView,
     createList
@@ -20,6 +19,7 @@ function index(req, res) {
 
 function show(req, res) {
     List.findById(req.params.id, function(err, list) {
+        console.log(list, "list in list controller show() ")
         if (err) {
             console.log(err);
         } else {

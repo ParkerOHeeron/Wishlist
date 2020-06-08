@@ -7,7 +7,7 @@ router.get('/', listCtrl.index);
 router.get('/new', listCtrl.new);  
 router.post('/', listCtrl.createList);
 router.get('/:id', listCtrl.show);
-//router.delete('/:id', listCtrl.delete); Haven't implemented multiple lists yet
+router.delete('/:id', listCtrl.delete); 
 router.post('/update/:id', listCtrl.update); 
 
 

@@ -11,12 +11,11 @@ var partSchema = new Schema({
 });
 
 var listSchema = new Schema({
-    name: String
+    name: String, 
+    parts: [partSchema]
 } , {
-    parts: [partSchema] 
-} , {
-    timestamps: true
-});
+    timestamps: true}
+);
 
 
 module.exports = mongoose.model('List', listSchema);
